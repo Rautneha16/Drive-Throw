@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neha Raut — IT Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio-3d.css" />
+</head>
+
+<body class="dark-mode">
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-title">NEHA RAUT</div>
+    <div class="loader-sub">Interactive 3D Portfolio</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+    <div class="loader-hint">Spawning Environment...</div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-name">NEHA RAUT</div>
+    <div class="hud-role">IT Engineer (B.Tech)</div>
+
+    <div class="top-right-group">
+      <button id="themeToggle" class="hud-btn">☀️ Light Mode</button>
+      <button id="musicToggle" class="hud-btn">🎵 Play Music</button>
+    </div>
+
+    <div class="hud-controls">
+      <div class="ctrl-group">
+        <div class="ctrl-row">
+          <div class="ctrl-key" id="kW">W</div>
+        </div>
+        <div class="ctrl-row">
+          <div class="ctrl-key" id="kA">A</div>
+          <div class="ctrl-key" id="kS">S</div>
+          <div class="ctrl-key" id="kD">D</div>
+        </div>
+        <div class="ctrl-label">Drive & Explore</div>
+      </div>
+    </div>
+
+    <div class="hud-zone">
+      <div class="zone-label">Nearby Region</div>
+      <div class="zone-name" id="zoneName">SAKURA FIELD</div>
+      <div class="zone-hint" id="zoneHint">Drive around</div>
+    </div>
+
+    <div class="hud-speed">
+      <div class="speed-val" id="speedVal">0</div>
+      <div class="speed-unit">km/h</div>
+    </div>
+
+    <div class="hud-info">
+      <div class="info-btn">i</div>
+      <div class="info-tooltip">
+        <strong>Controls:</strong><br/>
+        W/A/S/D — Drive<br/>
+        Space — Drift<br/>
+        L — Car Lights<br/>
+        H — Horn<br/>
+        M — Toggle Music<br/>
+        T — Theme (Light/Dark)
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL -->
+  <div id="panel">
+    <div class="panel-inner">
+      <button class="panel-close" id="panelClose" title="Close Panel">✕</button>
+      <div class="panel-tag" id="panelTag">Zone Info</div>
+      <h2 class="panel-title" id="panelTitle">Title</h2>
+      <div class="panel-body" id="panelBody"></div>
+      <div id="panelExtra"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast">
+    <div class="toast-title" id="toastTitle"></div>
+    <div class="toast-sub" id="toastSub"></div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <iframe id="youtube-player" style="display:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- We will use Web Audio generated pentatonic scale to avoid linking an external broken MP3 -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="portfolio-3d.js"></script>
+</body>
+
+</html>
